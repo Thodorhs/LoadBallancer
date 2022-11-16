@@ -38,12 +38,6 @@ class SimpleLoadBalancer(object):
         print("LB::OK! link between controller and switch inintialized lets send ARP to servers!!")
         for i in self.server_ips:
             self.send_proxied_arp_request(event.connection, i)
-
-
-    # update the load balancing choice for a certain client
-    def update_lb_mapping(self, client_ip):
-        # write your code here!!!
-        pass
     
 
     # send ARP reply "proxied" by the controller (on behalf of another machine in network)
